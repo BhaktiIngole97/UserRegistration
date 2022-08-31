@@ -12,8 +12,8 @@ namespace UserRegistration
         public static string NameRule = "^[A-Z][a-z]{3,}$";
         public static string EmailRule = "^[a-zA-Z0-9]+([.][a-zA-Z0-9]+)*[@][a-zA-Z0-9]{2,}[.][a-zA-Z]{2,3}([.][a-zA-Z]{2})?$";
         public static string MobileRule = "^[1-9]{2}[ ][0-9]{10}";
-        public static string PasswordRule = "^(?=.*[a-z])(?=.*[A-Z]).{8,}$";
-        public void validateFName(string FName)//this method is to check if First name is valid or not
+        public static string PasswordRule = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}$";
+        public void validateFName(string FName)
         {
             if (Regex.IsMatch(FName, NameRule))
             {
@@ -25,7 +25,7 @@ namespace UserRegistration
             }
         }
 
-        public void validateLName(string LName)//this method is to check if Last name is valid or not
+        public void validateLName(string LName)
         {
             if (Regex.IsMatch(LName, NameRule))
             {
@@ -36,7 +36,7 @@ namespace UserRegistration
                 Console.WriteLine("Invalid Last Name");
             }
         }
-        public void validateEmail(string Email)//this method is to check if Email is valid or not
+        public void validateEmail(string Email)
         {
             if (Regex.IsMatch(Email, EmailRule))
             {
@@ -47,7 +47,7 @@ namespace UserRegistration
                 Console.WriteLine("Invalid Email ID");
             }
         }
-        public void validateMobile(string Mobile)//this method is to check if Mobile no is valid or not
+        public void validateMobile(string Mobile)
         {
             if (Regex.IsMatch(Mobile, MobileRule))
             {
@@ -58,7 +58,7 @@ namespace UserRegistration
                 Console.WriteLine("Invalid Mobile No.");
             }
         }
-        public void validatePassword(string Password)//this method is to check if Password is valid or not
+        public void validatePassword(string Password)
         {
             if (Regex.IsMatch(Password, PasswordRule))
             {
@@ -71,6 +71,4 @@ namespace UserRegistration
         }
     }
 }
-
-
 
