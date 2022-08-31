@@ -12,7 +12,7 @@ namespace UserRegistration
         public static string NameRule = "^[A-Z][a-z]{3,}$";
         public static string EmailRule = "^[a-zA-Z0-9]+([.][a-zA-Z0-9]+)*[@][a-zA-Z0-9]{2,}[.][a-zA-Z]{2,3}([.][a-zA-Z]{2})?$";
         public static string MobileRule = "^[1-9]{2}[ ][0-9]{10}";
-        public static string PasswordRule = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,}$";
+        public static string PasswordRule = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&]).{8,}$";
         public void validateFName(string FName)
         {
             if (Regex.IsMatch(FName, NameRule))
